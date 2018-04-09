@@ -6,6 +6,9 @@
     <title>Crippas Blogg</title>
   </head>
   <body>
+
+      @include('partials/navigation')
+
     <main class="container">
       @yield('content')
     </main>

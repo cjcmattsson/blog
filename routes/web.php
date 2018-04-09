@@ -14,3 +14,6 @@
 
 
 Route::get('/', 'PagesController@index');
+Route::get('login', 'PagesController@login');
+Route::post('login', 'AuthController@login');
+Route::get('logout', 'AuthController@logout');

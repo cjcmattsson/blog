@@ -10,10 +10,23 @@ use App\User;
 
 class PagesController extends Controller
 {
-  public function index (): View
-  {
+    /**
+     * Display the index view.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index(): View
+    {
+        $user = User::with('posts')->first();
 
-    return view('index', ['name' => 'Laravel']);
+        return view('index', [
+            'name' => $user->name,
+            'posts' => $user->posts,
+        ]);
+    }
 
-  }
+    public function login(): View
+    {
+        return view('login');
+    }
 }
