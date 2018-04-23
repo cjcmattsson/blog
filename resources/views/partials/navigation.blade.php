@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
           </li>
           @else
             <li class="nav-item">
-              <a class="nav-link" href="login">LOGIN</a>
+              <a class="nav-link" href="{{url('login')}}">LOGIN</a>
           </li>
           @endif
 
