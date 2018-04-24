@@ -15,8 +15,10 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('login', 'PagesController@login')->name('login')->middleware('guest');
+
 Route::post('login', 'AuthController@login');
 Route::get('logout', 'AuthController@logout');
 
 Route::get('posts/{id}', 'PostsController@show')->name('posts.show');
 Route::get('posts/{id}/edit', 'PostsController@edit')->name('posts.edit')->middleware('auth');
+Route::put('posts/{id}', 'PostsController@update')->name('posts.update');

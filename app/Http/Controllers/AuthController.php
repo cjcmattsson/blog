@@ -15,7 +15,7 @@ class AuthController extends Controller
        if (Auth::attempt(['email' => $email, 'password' => $password])) {
            return redirect()->intended('/');
        }
-       return back()->withErrors('Wops');
+       return back()->withErrors('The email and/or password you entered was incorrect');
     }
 
     public function logout(Request $request)

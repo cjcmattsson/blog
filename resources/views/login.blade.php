@@ -14,12 +14,7 @@
         <input type="password" name="password" value="">
         <br>
       <button type="submit">Login</button>
-        @if ($errors->any())
-          @foreach ($errors->all() as $error)
-            <li>{{$error}}</li>
-          @endforeach
-
-        @endif
+        @include('partials/errors')
     </form>
 
 
